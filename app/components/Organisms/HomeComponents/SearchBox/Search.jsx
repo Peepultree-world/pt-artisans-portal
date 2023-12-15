@@ -10,7 +10,7 @@ export default function Search({setSearchText, searchText}) {
             <Image className="pointer-events-none w-[24px] h-[20px] absolute top-1/2 transform -translate-y-1/2 left-3 border-r-[1px] border-Border-primary pr-1" src={Search_Icon} alt='Search'/>
             <input className='h-[42px] border border-Border-primary rounded-[2px] w-full pl-12' placeholder='Search by PO, product name or SKU ID'
             onChange={(e)=>{setSearchText(e.target.value)}}/>
-            <Image className="pointer-events-none w-[20px] h-[20px] absolute top-1/2 transform -translate-y-1/2 right-3" src={Close_Icon_SC} alt='Close'/>
+            {searchText && <button onClick=(()=>{setSearchText(undefined)})><Image className="pointer-events-none w-[20px] h-[20px] absolute top-1/2 transform -translate-y-1/2 right-3" src={Close_Icon_SC} alt='Close'/> </button>}
         </div>
         </div>
   )

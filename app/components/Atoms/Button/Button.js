@@ -1,18 +1,18 @@
 import React from "react";
-import { BUTTON_TYPE } from "../../utils/constants";
+import { BUTTON_TYPE } from "../../../lib/constants";
 
 export default function Button({
   btnType,
   btnText,
   onClick,
-  customClass,
+  className,
   disabled,
   type,
 }) {
   const getBtnType = () => {
     switch (btnType) {
       case BUTTON_TYPE.PRIMARY:
-        return "bg-Button-primary rounded-[4px] text-center";
+        return "bg-Button-primary rounded-[4px] text-center min-h-[40px]";
     }
   };
   const handleDisabled = () => {
@@ -26,7 +26,7 @@ export default function Button({
 
   return (
     <button
-      className={`${customClass} ${getBtnType()} ${handleDisabled()}`}
+      className={`${className} ${getBtnType()} ${handleDisabled()}`}
       onClick={onClick}
       disabled={disabled}
       type={type}

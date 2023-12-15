@@ -21,8 +21,13 @@ module.exports = {
         },
         Text: {
           primary: "#1D1D1D",
-          secondary:"#C19426",
+          secondary:"#B4B4B4",
+          tertiary:"#C19426",
         },
+        Border: {
+          primary:"#B4B4B4",
+          seondary: "#E3E3E3"
+        }
     },
   },
 },
